@@ -1,8 +1,5 @@
 # Hablemos de Regresiones Lineales
 
-Created: Jul 25, 2020 6:27 PM
-Reviewed: No
-
 Antes de comenzar, te explico de qué va esto: Esto es una pequeña guía que toma un poco de todo el conocimiento que se puede encontrar por Internet (mención especial al profesor Adrian Catalán de Platzi y a DotCSV), además de libros y busca resumirlo con mucho cuidado a la par que explicamos la razón de cada línea de código y porqué esta ahí.
 
 Dicho eso, antes de empezar, deberías tener una noción mínima de Python, entender como funciona la libreria PyTorch y también saber un poco de matemáticas.
@@ -61,7 +58,7 @@ plt.xlabel('Gold')
 plt.scatter(gold, kills, s=10)
 ```
 
-![Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled.png](Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled.png)
+![regresiones-lineales/Untitled.png](regresiones-lineales/Untitled.png)
 
 Tenemos unos datos muy variados, y es que la cantidad de oro que reúne un equipo depende de muchos factores, pero si podemos notar que al menos en los primeros elementos obtenemos más oro mientras más asesinatos logramos.
 
@@ -71,7 +68,7 @@ A simple vista esto puede parecer algo demasiado obvio y no nos dice mucho, pero
 
 Hagamos un ejercicio a ojo e intentemos trazar una línea encima de nuestro plano que tenga el mismo comportamiento que nuestros puntos:
 
-![Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%201.png](Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%201.png)
+![regresiones-lineales/Untitled%201.png](regresiones-lineales/Untitled%201.png)
 
 Esta línea que acabamos de trazar, es un modelo.
 
@@ -79,7 +76,7 @@ Esta línea que acabamos de trazar, es un modelo.
 
 Bueno, ahora tenemos una pregunta que puede parecer complicada, pero no lo es. Vamos a definir al modelo como una ecuación que nos permite explicar algo que ocurre en la realidad usando a nuestros queridos números.
 
-![Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%202.png](Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%202.png)
+![regresiones-lineales/Untitled%202.png](regresiones-lineales/Untitled%202.png)
 
 ## ¿Entonces la línea que dibujamos es una ecuación?
 
@@ -103,7 +100,7 @@ Entonces, tenemos un plano con muchos puntos, y necesitamos una recta que pase p
 
 No, veamos el siguiente plano con muchos menos puntos para entender mejor lo que sucede:
 
-![Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%203.png](Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%203.png)
+![regresiones-lineales/Untitled%203.png](regresiones-lineales/Untitled%203.png)
 
 En este caso, hemos dibujado una recta (roja) mucho menos precisa que la anterior, y tenemos líneas verdes que van desde cada uno de los puntos a la recta, moviendose solo verticalmente. Estas líneas verdes tienen una distancia.
 
@@ -209,7 +206,7 @@ Vamos a usar los errores que guardamos anteriormente para ver qué esta sucedien
 plt.plot(range(iterations), losses)
 ```
 
-![Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%204.png](Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%204.png)
+![regresiones-lineales/Untitled%204.png](regresiones-lineales/Untitled%204.png)
 
 Aca notamos el comportamiento del algoritmo de gradientes descendentes, empezamos con un error grande y conforme avanzamos este error cada vez se disminuye hasta ser practicamente nulo.
 
@@ -221,7 +218,7 @@ plt.scatter(gold, kills, s=10)
 plt.show()
 ```
 
-![Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%205.png](Hablemos%20de%20Regresiones%20Lineales%201d6aa36e148246f0a97f9551c188a700/Untitled%205.png)
+![regresiones-lineales/Untitled%205.png](regresiones-lineales/Untitled%205.png)
 
 Y así, finalmente, hemos obtenido la recta que estabamos buscando. A simple vista podemos notar que no es 100% estricta, pero nos servira para hallar predicciones, o lo que es más importante, le servira a nuestros futuros algoritmos para que ellos mismos puedan conseguirlas.
 
